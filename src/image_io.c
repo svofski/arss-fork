@@ -42,7 +42,7 @@ double **bmp_in(FILE *bmpfile, int32_t *y, int32_t *x)
 	if (zerobytes==4)
 		zerobytes = 0;
 
-	for (iy=y-1; iy!=-1; iy--)        // BMP pixels are ordered: ...bottom row (left-to-right)... ... ...top row (left-to-right)...
+	for (iy=*y-1; iy!=-1; iy--)        // BMP pixels are ordered: ...bottom row (left-to-right)... ... ...top row (left-to-right)...
 	{
 		for (ix=0; ix<*x; ix++)
 		{

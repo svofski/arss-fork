@@ -16,7 +16,7 @@
 #define FORMAT_FLOAT32_COLUMNS        2
 
 
-int32_t quiet;
+extern int32_t quiet;
 
 extern void win_return();
 extern int32_t gettime();

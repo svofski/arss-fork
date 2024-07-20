@@ -1,5 +1,7 @@
 #include "util.h"
 
+int32_t quiet;
+
 void win_return()
 {
 	#ifdef WIN32
@@ -110,7 +112,7 @@ inline double dblrand()	// range is +/- 1.0
 	return ((double) rand_u32() * (1.0 / 2147483648.0)) - 1.0;
 }
 
-inline uint16_t fread_le_short(FILE *file)		// read from file a 16-bit integer in little endian
+uint16_t fread_le_short(FILE *file)		// read from file a 16-bit integer in little endian
 {
 	uint8_t	byte_a, byte_b;
 
@@ -120,7 +122,7 @@ inline uint16_t fread_le_short(FILE *file)		// read from file a 16-bit integer i
 	return (uint16_t) (byte_b<<8) | byte_a;
 }
 
-inline uint32_t fread_le_word(FILE *file)		// read from file a 32-bit integer in little endian
+uint32_t fread_le_word(FILE *file)		// read from file a 32-bit integer in little endian
 {
 	uint8_t	byte_a, byte_b, byte_c, byte_d;
 

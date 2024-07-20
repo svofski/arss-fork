@@ -17,13 +17,13 @@
 #define LOOP_SIZE_SEC_D	10.0
 #define BMSQ_LUT_SIZE_D	16000
 
-double pi;
-double LOGBASE;			// Base for log() operations. Anything other than 2 isn't really supported
+extern double pi;
+extern double LOGBASE;			// Base for log() operations. Anything other than 2 isn't really supported
 #define TRANSITION_BW_SYNT 16.0		// defines the transition bandwidth for the low-pass filter on the envelopes during synthesisation
-double LOOP_SIZE_SEC;		// size of the noise loops in seconds
-int32_t BMSQ_LUT_SIZE;		// defines the number of elements in the Blackman Square look-up table. It's best to make it small enough to be entirely cached
+extern double LOOP_SIZE_SEC;		// size of the noise loops in seconds
+extern int32_t BMSQ_LUT_SIZE;		// defines the number of elements in the Blackman Square look-up table. It's best to make it small enough to be entirely cached
 
-int32_t clocka;
+extern int32_t clocka;
 
 extern void fft(double *in, double *out, int32_t N, uint8_t method);
 extern void normi(double **s, int32_t xs, int32_t ys, double ratio);

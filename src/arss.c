@@ -29,7 +29,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.*
 #include "sound_io.h"
 #include "dsp.h"
 
-char *version = "0.3.0";
+char *version = "0.3.0fix";
 char *date = "September 28th, 2010";
 
 #define MSG_NUMBER_EXPECTED "A number is expected after %s\nExiting with error.\n"
